@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Wiki - Food Additives Database</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>E-Wiki <i class="fas fa-flask"></i></h1>
+            <p>E-uri in alimentație, ce mâncăm de fapt?</p>
+        </div>
+    </header>
+
+    <div class="app-wrapper">
+        <main class="container">
+            <div class="search-card">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Enter additive code (e.g., E330)...">
+                    <button id="search-button"><i class="fas fa-search"></i> Search</button>
+                </div>
+                <div class="search-tip">
+                    <i class="fas fa-info-circle"></i> Sfat: Poti cauta si cu prefixul 'E'
+                </div>
+            </div>
+            
+            <div id="result-container" class="result-container">
+                <!-- Search results will be displayed here -->
+            </div>
+            
+            <!-- New information section about E numbers -->
+            <div class="info-section">
+                <h2>Ce sunt aditivii alimentari cu coduri E?</h2>
+                
+                <div class="info-flex">
+                    <div class="info-text">
+
+                        <p>Aditivii alimentari sunt substanțe adăugate intenționat în alimente pentru a îndeplini anumite funcții tehnologice, cum ar fi îmbunătățirea gustului, a aspectului, a texturii sau pentru a prelungi termenul de valabilitate.</p>
+
+                        <p>Codurile E reprezintă substanțe utilizate ca aditivi alimentari în Uniunea Europeană și în alte țări. Litera "E" semnifică faptul că aditivul a fost evaluat și aprobat pentru utilizare în UE.</p>
+                        
+                        <h3>Categorii principale de aditivi alimentari:</h3>
+                        <ul class="category-list">
+                            <li>
+                                <span class="category-badge">E100-E199</span>
+                                <strong>Coloranți</strong> - oferă sau restabilesc culoarea alimentelor
+                            </li>
+                            <li>
+                                <span class="category-badge">E200-E299</span>
+                                <strong>Conservanți</strong> - prelungesc valabilitate a alimentelor
+                            </li>
+                            <li>
+                                <span class="category-badge">E300-E399</span>
+                                <strong>Antioxidanți</strong> - împiedică oxidarea și râncezeala
+                            </li>
+                            <li>
+                                <span class="category-badge">E400-E499</span>
+                                <strong>Emulsifianți și stabilizatori</strong> - mențin textura uniformă
+                            </li>
+                            <li>
+                                <span class="category-badge">E500-E599</span>
+                                <strong>Regulatori de aciditate</strong> - modifică aciditatea
+                            </li>
+                            <li>
+                                <span class="category-badge">E600-E699</span>
+                                <strong>Potențiatori de gust</strong> - intensifică gustul alimentelor
+                            </li>
+                            <li>
+                                <span class="category-badge">E900-E999</span>
+                                <strong>Îndulcitori și diverse</strong> - inclusiv agenți de glazurare
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Image container -->
+                    <div class="info-image">
+                        <div class="image-container">
+                            <img src="images/E-uri proteine 2.jpg" alt="Aditivi alimentari" class="info-img">
+                        </div>
+                    </div>
+                </div> <!-- Închidere corectă pentru info-flex -->
+                
+                <div class="safety-guide">
+                    <h3>Ghid de culori pentru siguranța aditivilor</h3>
+                    <div class="safety-indicators">
+                        <div class="safety-indicator safe">
+                            <div class="indicator-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="indicator-text">
+                                <h4>Sigur</h4>
+                                <p>Aditivi considerați siguri pentru consum, fără efecte adverse cunoscute în cantitățile utilizate în mod normal.</p>
+                            </div>
+                        </div>
+                        <div class="safety-indicator controversial">
+                            <div class="indicator-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                            <div class="indicator-text">
+                                <h4>Controversat</h4>
+                                <p>Aditivi cu studii contradictorii sau care ar putea cauza reacții adverse la anumite persoane sensibile.</p>
+                            </div>
+                        </div>
+                        <div class="safety-indicator dangerous">
+                            <div class="indicator-icon"><i class="fas fa-radiation-alt"></i></div>
+                            <div class="indicator-text">
+                                <h4>Periculos</h4>
+                                <p>Aditivi considerați potențial nocivi, restricționați în unele țări sau care au fost asociați cu efecte negative asupra sănătății.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-disclaimer">
+                    <i class="fas fa-info-circle"></i>
+                    <p>Informațiile furnizate în această aplicație sunt doar cu scop informativ și educațional. Consultați întotdeauna un specialist în nutriție sau un medic pentru sfaturi personalizate.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 E-Wiki | Ryan & Justin | <i class="fas fa-code"></i> with <i class="fas fa-heart"></i></p>
+        </div>
+    </footer>
+    
+    <script src="js/load-data.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
